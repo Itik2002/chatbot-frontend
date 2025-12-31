@@ -207,3 +207,157 @@ input, button {
   color: white;
   cursor: pointer;
 }
+
+/* ===== APP LAYOUT ===== */
+.app-layout {
+  display: flex;
+  height: 100vh;
+  background-color: #0f0f0f;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 260px;
+  background-color: #171717;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.sidebar-header {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.new-chat-btn {
+  background: #2a2a2a;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.chat-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.chat-item {
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.chat-item:hover,
+.chat-item.active {
+  background-color: #2a2a2a;
+  opacity: 1;
+}
+
+.sidebar-footer {
+  border-top: 1px solid #2a2a2a;
+  padding-top: 12px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  flex: 1;
+  position: relative;
+}
+
+.app-layout {
+  display: flex;
+  height: 100vh;
+  background-color: #0f0f0f;
+}
+
+.main-content {
+  flex: 1;
+  position: relative;
+}
+
+
+.auth-container {
+  width: 420px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 80px auto;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.auth-tabs {
+  display: flex;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 20px;
+}
+
+.auth-tabs span {
+  flex: 1;
+  text-align: center;
+  padding: 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.auth-tabs .active {
+  color: #1e73e8;
+  border-bottom: 3px solid #1e73e8;
+}
+
+.google-btn {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background: white;
+}
+
+.divider {
+  text-align: center;
+  margin: 15px 0;
+  color: #aaa;
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.auth-field input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 12px;
+  background: #1e73e8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.forgot {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: #1e73e8;
+}
+
+.checkbox {
+  margin-top: 10px;
+}
