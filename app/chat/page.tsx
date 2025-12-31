@@ -98,6 +98,7 @@ export default function ChatPage() {
 
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [conversationId, setConversationId] = useState<string | null>(null);
 
   // ✅ Protect chat page
   useEffect(() => {
@@ -110,7 +111,7 @@ export default function ChatPage() {
   const sendMessage = async () => {
     if (!input.trim()) return;
 
-    // 1️⃣ show user message immediately
+    // 1️⃣ Show user message immediately
     const userMessage: ChatMessage = {
       role: "user",
       content: input,
@@ -122,21 +123,29 @@ export default function ChatPage() {
     try {
       const res = await fetch("http://localhost:8000/chat", {
         method: "POST",
+        credentials: "include", // ✅ IMPORTANT (JWT cookie)
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
         body: JSON.stringify({
-          message: userMessage.content,
+          conversation_id: conversationId, // null on first message
+          message: {
+            content: userMessage.content,
+          },
         }),
       });
 
       const data = await res.json();
 
-      // ⚠️ backend response key adjust if needed
+      // ✅ Save session_id first time
+      if (!conversationId && data.session_id) {
+        setConversationId(data.session_id);
+      }
+
+      // Backend response handling
       const botText =
-        data.reply ||
         data.response ||
+        data.reply ||
         data.answer ||
         "No response";
 
