@@ -361,3 +361,131 @@ input, button {
 .checkbox {
   margin-top: 10px;
 }
+
+.config-section {
+  border: 1px solid #e5e7eb;
+  padding: 16px;
+  border-radius: 10px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background: #fafafa;
+}
+
+.config-title {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.config-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.config-grid label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.config-input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.config-input-row label {
+  font-size: 13px;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.config-input-row input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+}
+.config-section {
+  border: 1px solid #e5e7eb;
+  padding: 16px;
+  border-radius: 10px;
+  margin: 16px 0;
+  background: #fafafa;
+}
+
+.config-title {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.config-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.config-input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.config-input-label {
+  font-size: 13px;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.config-input-row input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+}
+
+.config-section {
+  border: 1px solid #e5e7eb;
+  padding: 16px;
+  border-radius: 8px;
+  background: #fafafa;
+  margin: 16px 0;
+}
+
+.config-title {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.config-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.config-input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 14px;
+}
+
+.config-input-col label {
+  font-size: 13px;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.config-input-col input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+}
